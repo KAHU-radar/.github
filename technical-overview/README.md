@@ -41,7 +41,7 @@ or over TCP).
 
 Radar imagery is directly received over multicast over ethernet by the
 Radar plugin for OpenCPN. The Radar plugin generates ARPA targets.
-These are further processed by the KAHU Radar Hub plugin, which
+These are further processed by the [KAHU Radar Hub plugin](https://github.com/KAHU-radar/radarhub-opencpn), which
 geolocates the target positions using position and heading information
 received via NMEA.
 
@@ -70,8 +70,8 @@ respective standard cabling, or over TCP.
 SignalK is connected to the radar NMEA stream as well as heading and
 position streams from AIS and heading sensor.
 
-The received ARPA target messages ($RATTM) are processed by the KAHU
-Radar Hub plugin, which geolocates the target positions using position
+The received ARPA target messages ($RATTM) are processed by the [KAHU
+Radar Hub plugin](https://github.com/KAHU-radar/radarhub-signalk), which geolocates the target positions using position
 and heading information received via NMEA.
 
 Consecutive locations for the same ARPA target are strung together
