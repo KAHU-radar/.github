@@ -87,8 +87,9 @@ If internet is not available, paths are cached locally in an [sqlite database](h
 
 Our cloud platform is hosted on Google Compute Engine. It consists of three main components: A [PostGIS database server](https://postgis.net/)
 that stores paths and allows for queries against paths, a submission server that the on board systems connect to to deliver paths, and
-a [Django](https://www.djangoproject.com/) based web application for user regisration and data access.
+a [Django](https://www.djangoproject.com/) based web application for user regisration and data access. The submission server uses the Django ORM
+for database access and so shares the same access control code as the web application.
 
-Access control for the web application is done using [Django allauth](https://allauth.org/), which provides integration with various OAuth2 providers such as github, google, microsoft etc.
+Authentication for the web application is done using [Django allauth](https://allauth.org/), which provides integration with various OAuth2 providers such as github, google, microsoft etc.
 
-Access control for the submission server is done using API keys.
+Authentication for the submission server is done using API keys.
