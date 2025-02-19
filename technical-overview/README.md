@@ -27,7 +27,7 @@ There are currently two possible on-board set-ups, and the choice
 depends on whether your radar is one of the [OpenCPN supported
 models](https://github.com/opencpn-radar-pi/radar_pi/wiki) or not.
 
-# Alternative one
+## Alternative one
 
 This set up is for vessels with a [supported
 radar](https://github.com/opencpn-radar-pi/radar_pi/wiki).
@@ -47,15 +47,14 @@ received via NMEA.
 
 Consecutive locations for the same ARPA target are strung together
 into a path, and this path uploaded to our cloud using an efficient
-Apache Avro based protocol.
+[Apache Avro](https://avro.apache.org/) based [protocol](https://github.com/KAHU-radar/radarhub-opencpn/blob/master/data/proto_avro.json).
 
-If internet is not available, paths are cached locally until
-cponnectivity is restored.
+If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
 ![Alternative 1 overview](tech-overview-alternative-1.svg)
 
 
-# Alternative two
+## Alternative two
 
 This setup works for any radar model as long as it can stream ARPA
 targets over NMEA ($RATTM messages).
@@ -76,9 +75,8 @@ and heading information received via NMEA.
 
 Consecutive locations for the same ARPA target are strung together
 into a path, and this path uploaded to our cloud using an efficient
-Apache Avro based protocol.
+[Apache Avro](https://avro.apache.org/) based [protocol](https://github.com/KAHU-radar/radarhub-opencpn/blob/master/data/proto_avro.json).
 
-If internet is not available, paths are cached locally until
-cponnectivity is restored.
+If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
 ![Alternative 2 overview](tech-overview-alternative-2.svg)
