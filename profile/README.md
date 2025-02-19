@@ -12,3 +12,5 @@ Start collecting and sharing vessel tracks.
 As a thank you for your contribution, you’ll gain access to our database, providing valuable insights to enhance your navigation and situational awareness at sea. We are also in the process of designing a more attractive incentive system to make it worthwhile for you to contribute continuously.
 
 [Join us](https://crowdsource.kahu.earth) in advancing maritime safety - one radar track at a time!
+
+For more details, see the [technical overview](../technical-overview/README.md).
