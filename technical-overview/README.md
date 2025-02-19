@@ -6,18 +6,18 @@ how they interact with each other and with other on-board systems.
 Before we delve into the details, here are some general notes about
 the onboard-systems and their security design:
 
-* The on board software receives data from various navigation systems
+* The on board software **receives data** from various **navigation systems**
   (over NMEA and/or ethernet), but /never sends/ nor produces any data
   to/for them.
 
   * In the case of NMEA 0183, it is even possible and recommend to
     only connect the RX wires!
 
-* The on board software connects to and /sends/ data to our cloud
-  service, but can not be connected to by, nor receive any data or
+* The on board software connects to and **sends data** to our **cloud
+  service**, but can not be connected to by, nor receive any data or
   commands from the cloud service.
 
-* All on-board software is open source and its functioning can be
+* All on-board software is **open source** and its functioning can be
   verified by you or third parties
 
   * We provide a minimal open source server implementation so that all
