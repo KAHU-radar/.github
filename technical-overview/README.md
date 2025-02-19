@@ -20,8 +20,10 @@ the onboard-systems and their security design:
 * All on-board software is **open source** and its functioning can be
   verified by you or third parties
 
-  * We provide a minimal open source server implementation so that all
+  * We provide a [minimal open source server implementation](https://github.com/KAHU-radar/radarhub-opencpn/tree/master/server) so that all
     on-board software can be tested in isolation (without our cloud).
+
+# On board system
 
 There are currently two possible on-board set-ups, and the choice
 depends on whether your radar is one of the [OpenCPN supported
@@ -80,3 +82,13 @@ into a path, and this path uploaded to our cloud using an efficient
 If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
 ![Alternative 2 overview](tech-overview-alternative-2.svg)
+
+# Cloud platform
+
+Our cloud platform is hosted on Google Compute Engine. It consists of three main components: A [PostGIS database server](https://postgis.net/)
+that stores paths and allows for queries against paths, a submission server that the on board systems connect to to deliver paths, and
+a [Django](https://www.djangoproject.com/) based web application for user regisration and data access.
+
+Access control for the web application is done using [Django allauth](https://allauth.org/), which provides integration with various OAuth2 providers such as github, google, microsoft etc.
+
+Access control for the submission server is done using API keys.
