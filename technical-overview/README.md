@@ -62,7 +62,9 @@ This setup works for any radar model as long as it can stream ARPA
 targets over NMEA ($RATTM messages).
 
 This solution uses and integrates with [Signal K](https://signalk.org/),
-an open source on board marine data hub.
+an open source on board marine data hub. This setup offers great flexibility, as 
+SignalK has plugins to connect to many different on board systems and protocols,
+including many proprietary protocols.
 
 Moving radar targets (ARPA targets) are identified by the radar. The
 radar sends these over NMEA 0183 or NMEA 2000, either over their
