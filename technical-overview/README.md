@@ -53,7 +53,7 @@ into a path, and this path uploaded to our cloud using an efficient
 
 If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
-![Alternative 1 overview](Tech-Overview-Alt #1.png)
+![Alternative 1 overview](Tech-Overview-Alt-1.png)
 
 ## Alternative two
 
@@ -85,7 +85,7 @@ into a path, and this path uploaded to our cloud using an efficient
 
 If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
-![Alternative 2 overview](Tech-Overview-Alt #2.png)
+![Alternative 2 overview](Tech-Overview-Alt-2.png)
 
 # Cloud-based KAHU platform
 
