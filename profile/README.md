@@ -15,6 +15,6 @@ As a thank you for your contribution, you’ll gain access to our database, prov
 
 For more details on the system, see the [technical overview](../technical-overview/README.md).
 
-For an analysis of potential best case coverage using our system, see the [coverage map](https://github.com/KAHU-radar/CoverageMap).
+For an analysis of potential best case coverage using our system, see the [coverage map](https://github.com/KAHU-radar/CoverageMap/blob/master/README.md).
 
 ![Potential coverage](https://raw.githubusercontent.com/KAHU-radar/CoverageMap/refs/heads/master/horizon-coverage.svg)
