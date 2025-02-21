@@ -13,6 +13,8 @@ As a thank you for your contribution, you’ll gain access to our database, prov
 
 [Join us](https://crowdsource.kahu.earth) in advancing maritime safety - one radar track at a time!
 
-For more details, see the [technical overview](../technical-overview/README.md).
+For more details on the system, see the [technical overview](../technical-overview/README.md).
+
+For an analysis of potential best case coverage using our system, see the [coverage map](https://github.com/KAHU-radar/CoverageMap).
 
 ![Potential coverage](https://raw.githubusercontent.com/KAHU-radar/CoverageMap/refs/heads/master/horizon-coverage.svg)
