@@ -87,7 +87,7 @@ If internet is not available, paths are cached locally in an [sqlite database](h
 
 ![Alternative 2 overview](tech-overview-alternative-2.svg)
 
-# Cloud platform
+# Cloud-based KAHU platform
 
 Our cloud platform is hosted on Google Compute Engine. It consists of three main components: A [PostGIS database server](https://postgis.net/)
 that stores paths and allows for queries against paths, a submission server that the on board systems connect to to deliver paths, and
