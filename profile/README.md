@@ -1,5 +1,5 @@
-# KAHU
-Enhancing maritime safety through interconnected vessel radar imagery
+# KAHU: Enhancing maritime safety through connected vessel radar imagery
+
 Maritime safety is vital to preserving the integrity of our oceans and ensuring secure navigation for all.
 
 If you're a sailor, you can now contribute to this mission and we are excited that you decided to do so.
