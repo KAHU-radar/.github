@@ -1,6 +1,6 @@
 # Technical overview of KAHU platform
 
-The following document describes our onboard and cloud systems, and
+The following overview describes our onboard and cloud systems, and
 how they interact with each other and with other onboard systems.
 
 Before we get into the details, here are some general notes about
