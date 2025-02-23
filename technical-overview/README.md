@@ -3,8 +3,7 @@
 The following overview describes our onboard and cloud systems, and
 how they interact with each other and with other onboard systems.
 
-Before we get into the details, here are some general notes about
-the onboard systems and their security design:
+First, some general notes about the onboard systems and their security design:
 
 * The onboard software **receives data** from various **navigation systems**
   (over NMEA and/or Ethernet), but **never sends** nor produces any data
