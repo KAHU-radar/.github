@@ -23,7 +23,7 @@ First, some general notes about the onboard systems and their security design:
 There are currently two possible onboard setups, depending on whether your radar is one of the [OpenCPN supported
 models](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
-## 1. OpenCPN set-up
+## 1. OpenCPN setup
 
 This set up is for vessels with an [OpenCPN supported
 radar](https://github.com/opencpn-radar-pi/radar_pi/wiki).
