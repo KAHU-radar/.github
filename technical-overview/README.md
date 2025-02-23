@@ -10,7 +10,7 @@ the onboard systems and their security design:
   (over NMEA and/or Ethernet), but **never sends** nor produces any data
   for them.
 
-  * For NMEA 0183 connections, we recommended to only connect the **RX (receive) wires**.
+  * For NMEA 0183 connections, we recommend to only connect the **RX (receive) wires** for extra security.
 
 * The onboard software connects to and **sends data** to our **cloud
   service**, but **cannot receive** data, commands, or connections from the cloud.
