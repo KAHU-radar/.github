@@ -15,7 +15,7 @@ the onboard systems and their security design:
 * The onboard software connects to and **sends data** to our **cloud
   service**, but **cannot receive** data, commands, or connections from the cloud.
 
-* All on-board software is **open source**, allowing for independent verification by users or third parties.
+* All onboard software is **open source**, allowing for independent verification by users or third parties.
 
   * We provide a [minimal open-source server implementation](https://github.com/KAHU-radar/radarhub-opencpn/tree/master/server) for testing onboard software in isolation (without requiring cloud connectivity).
 
