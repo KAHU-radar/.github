@@ -7,7 +7,7 @@ Before we get into the details, here are some general notes about
 the onboard systems and their security design:
 
 * The onboard software **receives data** from various **navigation systems**
-  (over NMEA and/or ethernet), but **never sends** nor produces any data
+  (over NMEA and/or Ethernet), but **never sends** nor produces any data
   for them.
 
   * For NMEA 0183 connections, we recommended to only connect the **RX (receive) wires**.
