@@ -6,7 +6,7 @@ how they interact with each other and with other onboard systems.
 Before we get into the details, here are some general notes about
 the onboard systems and their security design:
 
-* The on board software **receives data** from various **navigation systems**
+* The onboard software **receives data** from various **navigation systems**
   (over NMEA and/or ethernet), but **never sends** nor produces any data
   for them.
 
