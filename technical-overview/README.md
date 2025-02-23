@@ -21,7 +21,7 @@ the onboard systems and their security design:
 
 # Onboard system
 
-There are currently two possible onboard set-ups, depending on whether your radar is one of the [OpenCPN supported
+There are currently two possible onboard setups, depending on whether your radar is one of the [OpenCPN supported
 models](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
 ## 1. OpenCPN set-up
@@ -30,7 +30,7 @@ This set up is for vessels with an [OpenCPN supported
 radar](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
 This solution uses and integrates with [OpenCPN](https://opencpn.org),
-an open-source chart plotter with a radar plotter plugin.
+an open source chart plotter with a radar plotter plugin.
 
 * Connectivity:
   * OpenCPN connects to the radar antenna unit via Ethernet.
@@ -43,16 +43,16 @@ an open-source chart plotter with a radar plotter plugin.
 * Path generation and upload:
   * Consecutive ARPA target locations are combined into a path.
   * The path is uploaded to the cloud using an efficient [Apache Avro](https://avro.apache.org/)-based [protocol](https://github.com/KAHU-radar/radarhub-opencpn/blob/master/data/proto_avro.json).
-  * If the internet is unavailable, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
+  * If the internet is unavailable, paths are cached locally in an [SQLite database](https://sqlite.org/) until connectivity is restored.
 
 ![Alternative 1 overview](Tech-Overview-Alt-1.png)
 
-## 2. Signal K set-up
+## 2. Signal K setup
 
 This setup supports any radar model that can stream ARPA targets over NMEA ($RATTM messages).
 
 * Core technology:
-  * Uses [Signal K](https://signalk.org/), an open-source onboard marine data hub.
+  * Uses [Signal K](https://signalk.org/), an open source onboard marine data hub.
   * Signal K provides flexibility by supporting various onboard systems and proprietary protocols through its plugins.
 
 * Data processing:
