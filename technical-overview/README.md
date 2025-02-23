@@ -7,51 +7,43 @@ Before we get into the details, here are some general notes about
 the onboard systems and their security design:
 
 * The on board software **receives data** from various **navigation systems**
-  (over NMEA and/or ethernet), but /never sends/ nor produces any data
-  to/for them.
+  (over NMEA and/or ethernet), but **never sends** nor produces any data
+  for them.
 
-  * In the case of NMEA 0183, it is even possible and recommended to
-    only connect the RX wires!
+  * For NMEA 0183 connections, we recommended to only connect the **RX (receive) wires**.
 
 * The onboard software connects to and **sends data** to our **cloud
-  service**, but can not be connected to by, nor receive any data or
-  commands from the cloud service.
+  service**, but **cannot receive** data, commands, or connections from the cloud.
 
-* All on-board software is **open source** and its functioning can be
-  verified by you or third parties.
+* All on-board software is **open source**, allowing for independent verification by users or third parties.
 
-  * We provide a [minimal open source server implementation](https://github.com/KAHU-radar/radarhub-opencpn/tree/master/server) so that all
-    onboard software can be tested in isolation (without our cloud).
+  * We provide a [minimal open-source server implementation](https://github.com/KAHU-radar/radarhub-opencpn/tree/master/server) for testing onboard software in isolation (without requiring cloud connectivity).
 
 # Onboard system
 
-There are currently two possible onboard set-ups, and the choice
-depends on whether your radar is one of the [OpenCPN supported
-models](https://github.com/opencpn-radar-pi/radar_pi/wiki) or not.
+There are currently two possible onboard set-ups, depending on whether your radar is one of the [OpenCPN supported
+models](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
-## Alternative one
+## 1. OpenCPN set-up
 
 This set up is for vessels with a [supported
 radar](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
 This solution uses and integrates with [OpenCPN](https://opencpn.org),
-an open source chart plotter with a radar plotter plug-in.
+an open-source chart plotter with a radar plotter plug-in.
 
-OpenCPN is connected to the radar antenna unit via ethernet as well as
-to the AIS and heading sensors via NMEA (0183 or 2000 via usb adapter
-or over TCP).
+* Connectivity:
+  * OpenCPN connects to the radar antenna unit via Ethernet.
+  * It also connects to AIS and heading sensors via NMEA (0183 or 2000 via USB adapter or over TCP).
 
-Radar imagery is directly received over multicast over ethernet by the
-Radar plugin for OpenCPN. The Radar plugin generates ARPA targets.
-These are further processed by the [KAHU Radar Hub plugin](https://github.com/KAHU-radar/radarhub-opencpn), which
-geolocates the target positions using position and heading information
-received via NMEA.
+* Data processing:
+  * Radar imagery is received via multicast over Ethernet using the OpenCPN Radar plug-in, which generates ARPA targets.
+  * These targets are processed by the [KAHU Radar Hub plugin](https://github.com/KAHU-radar/radarhub-opencpn), which geolocates target positions using heading and position data from NMEA.
 
-Consecutive locations for the same ARPA target are strung together
-into a path, and this path uploaded to our cloud using an efficient
-[Apache Avro](https://avro.apache.org/) based [protocol](https://github.com/KAHU-radar/radarhub-opencpn/blob/master/data/proto_avro.json).
-
-If internet is not available, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
+* Path generation and upload:
+  * Consecutive ARPA target locations are combined into a path.
+  * The path is uploaded to the cloud using an efficient [Apache Avro](https://avro.apache.org/)-based [protocol](https://github.com/KAHU-radar/radarhub-opencpn/blob/master/data/proto_avro.json).
+  * If the internet is unavailable, paths are cached locally in an [sqlite database](https://sqlite.org/) until connectivity is restored.
 
 ![Alternative 1 overview](Tech-Overview-Alt-1.png)
 
