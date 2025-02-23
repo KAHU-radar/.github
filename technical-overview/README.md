@@ -26,7 +26,7 @@ models](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
 ## 1. OpenCPN set-up
 
-This set up is for vessels with a [supported
+This set up is for vessels with an [OpenCPN-supported
 radar](https://github.com/opencpn-radar-pi/radar_pi/wiki).
 
 This solution uses and integrates with [OpenCPN](https://opencpn.org),
