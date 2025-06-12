@@ -56,7 +56,7 @@ This setup supports any radar model that can stream ARPA targets over NMEA ($RAT
 
 * Data processing:
   * The radar identifies and transmits ARPA targets via NMEA 0183 or NMEA 2000 - either over their
-respective standard cabling or TCP.
+respective standard cabling or over TCP or UDP.
   * Signal K connects to the radar NMEA stream as well as heading and position streams from AIS and heading sensor.
   * The received ARPA target messages ($RATTM) are processed by the [KAHU Radar Hub plugin](https://github.com/KAHU-radar/radarhub-signalk), which geolocates the target positions using position and heading information received via NMEA.
 
